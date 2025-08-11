@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="QR code component to visit Frontend Mentor and enhance front-end skills">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | QR Code Component</title>
+  <style>
+    /* CSS Custom Properties for Maintainability */
+    :root {
+      --clr-primary: hsl(218, 44%, 22%);
+      --clr-secondary: hsl(220, 15%, 55%);
+      --clr-background: hsl(212, 45%, 89%);
+      --clr-white: hsl(0, 0%, 100%);
+      --radius: 20px;
+      --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      --spacing: 1rem;
+      --max-width: 320px;
+    }
+
+    /* Reset and Base Styles */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background-color: var(--clr-background);
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      padding: var(--spacing);
+    }
+
+    /* Card Component */
+    .qr-card {
+      background-color: var(--clr-white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      max-width: var(--max-width);
+      width: 100%;
+      padding: var(--spacing);
+      text-align: center;
+    }
+
+    /* Image Container */
+    .qr-image {
+      display: block;
+      width: 100%;
+      border-radius: calc(var(--radius) / 2);
+    }
+
+    /* Text Content */
+    .qr-content {
+      padding: calc(var(--spacing) * 1.5) var(--spacing);
+    }
+
+    .qr-title {
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: var(--clr-primary);
+      margin-bottom: var(--spacing);
+    }
+
+    .qr-description {
+      font-size: 0.9375rem;
+      font-weight: 400;
+      color: var(--clr-secondary);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 375px) {
+      .qr-card {
+        max-width: 280px;
+      }
+    }
+
+    /* Accessibility Enhancements */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <main class="qr-card" role="main" aria-labelledby="qr-title">
+    <img class="qr-image" src="./images/image-qr-code.png" alt="QR code to visit Frontend Mentor">
+    <div class="qr-content">
+      <h1 class="qr-title" id="qr-title">Improve your front-end skills by building projects</h1>
+      <p class="qr-description">
+        Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
+      </p>
+    </div>
+  </main>
+</body>
+</html>
